@@ -1,7 +1,121 @@
-.App {
-  text-align: center;
+/* Genel stil */
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
+/* Main Content Arka Plan Rengi */
+.main-content {
+  background-color: #333; /* Koyu gri arka plan rengi */
+  color: white; /* Yazı rengini beyaz yapıyoruz */
+  flex: 1; /* Sidebar ve Footer arasındaki alanı doldurur */
+  padding: 20px; /* İçerik etrafında biraz boşluk bırakır */
+}
+
+
+/* Header stili */
+.header {
+  background-color: #2d3748; /* Yeşil arka plan */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 1000; /* Header'ın üstte kalması için */
+}
+
+/* Header'daki logo ve navbar stilleri */
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header .logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.sidebar {
+  background-color: #333;
+  color: white;
+  width: 250px;
+  padding: 20px;
+  position: fixed; /* Sidebar'ı sayfada sabit tutuyoruz */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999; /* Sidebar'ı içeriklerin önünde tutuyoruz */
+  transition: transform 0.3s ease; /* Sidebar animasyonu ekliyoruz */
+}
+
+/* Sidebar içeriği */
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #ddd;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar li a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar li a:hover {
+  color: #fff;
+}
+
+/* Content kısmı */
+.content {
+  flex: 1;
+  margin-left: 250px; /* Sidebar'ın sağında boşluk bırakıyoruz */
+  padding: 20px;
+  background-color: #f4f4f4;
+  transition: margin-left 0.3s ease; /* İçeriğin kayması animasyonu */
+}
+
+/* Footer stili */
+.footer {
+  background-color: #2d3748; /* Yeşil arka plan */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Animasyonlar */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Logo kısmındaki animasyon */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -10,29 +124,5 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

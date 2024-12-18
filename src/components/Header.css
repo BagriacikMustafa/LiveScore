@@ -1,0 +1,91 @@
+/* Header stili */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px 30px; /* Padding genişletildi */
+  position: sticky; /* Sayfa kaydırıldığında üstte sabit kalır */
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+}
+
+/* Navbar düzeni */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Maksimum genişlik belirlendi */
+  margin: 0 auto; /* Ortalandı */
+}
+
+/* Logo kısmı */
+.logo {
+  font-size: 26px; /* Logo font büyüklüğü artırıldı */
+  font-weight: bold;
+  color: #ff9800; /* Logo rengi değiştirildi */
+}
+
+/* Ana menü linkleri */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Menü öğeleri arasındaki mesafe artırıldı */
+  margin: 0;
+  padding: 0;
+}
+
+/* Her bir menü öğesinin stilini tanımlama */
+.nav-links li {
+  font-size: 18px; /* Font büyüklüğü arttırıldı */
+}
+
+/* Linklerin stilini tanımlama */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px; /* İç boşluk eklendi */
+  border-radius: 8px; /* Köşe yuvarlama */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Renk ve arka plan geçiş efekti */
+}
+
+/* Link üzerine gelince renk değişimi */
+.nav-links a:hover {
+  color: #333;
+  background-color: #ff9800; /* Hover efektine arka plan rengi eklendi */
+}
+
+/* Aktif durum (tıklandığında kırmızı) */
+.nav-links a.active {
+  color: #fff;
+  background-color: red; /* Tıklanmış öğe kırmızı olur */
+}
+
+/* Sporlar için alt menü */
+.sports-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Menü öğeleri arasındaki mesafe */
+  margin-top: 20px; /* Menü ile üst kısmı arasına mesafe eklendi */
+}
+
+.sports-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 20px; /* İç boşluk eklenerek daha geniş butonlar oluşturuldu */
+  border-radius: 8px; /* Köşe yuvarlama */
+  background-color: #444; /* Arka plan rengi */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover efekti */
+.sports-menu a:hover {
+  background-color: #ff9800; /* Hoverda arka plan değişimi */
+  color: #333;
+}
+
+/* Aktif spor menüsü linki */
+.sports-menu a.active {
+  background-color: red; /* Tıklanmış spor öğesi kırmızı olur */
+  color: white;
+}

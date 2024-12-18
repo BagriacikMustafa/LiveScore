@@ -1,0 +1,6 @@
+/* src/styles/tailwind.css */
+
+/* Tailwind CSS'in temel yapılandırma direktifleri */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
